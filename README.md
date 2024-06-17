@@ -8,7 +8,7 @@ By default it is enabled on the following commands `ls`, `cd`, `cp`, `mv` and `r
 
 INSTALATION
 ===========
-Download the latest release or clone this repo.
+Clone this repo.
 add `source <path to palias>/autocomplete.sh` to yout `.bash_rc`
 
 USAGE
