@@ -58,7 +58,6 @@ class Repository:
     def list_all(self) -> list[Alias]:
         c:sqlite3.Cursor = self._db.cursor()
         res = c.execute("SELECT * FROM alias ORDER BY alias ASC")
-
         return [Alias.fromList(row) for row in res.fetchall()]
 
     def find(self, alias:str) -> str|None:
@@ -87,6 +86,8 @@ class PAlias:
         self._repo.add(Alias.fromList(prompt))
 
     def find_alias(self, prompt:list) -> str:
+        if (len(prompt) < 1):
+            return ''
         res = self._repo.find(prompt[0])
 
         print('' if res is None else res)
@@ -98,7 +99,7 @@ class PAlias:
 
     def delete_alias(self, prompt:list)-> None:
         if len(prompt) != 1:
-             raise Exception('--remove needs 1 arguments, alias')
+             raise Exception('--remove needs 1 argument, alias')
 
         self._repo.remove(prompt[0])
 
