@@ -8,3 +8,8 @@ _PAlias_auto_complete() {
 }
 
 complete -d -o filenames -F _PAlias_auto_complete ls cd cp mv rm
+
+echo "Available Aliases for completion"
+PAlias_BASE=$(dirname $BASH_SOURCE )
+$PAlias_BASE/palias --list
+echo
