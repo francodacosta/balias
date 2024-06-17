@@ -8,7 +8,7 @@ By default it is enabled on the following commands `ls`, `cd`, `cp`, `mv` and `r
 
 INSTALATION
 ===========
-Donload the latest release or clone this repo.
+Download the latest release or clone this repo.
 add `source <path to palias>/autocomplete.sh` to yout `.bash_rc`
 
 USAGE
@@ -23,4 +23,4 @@ List all
 
 Delete
 ------------
-`palias --remoce <alias>` eg `palias --remove p`
+`palias --remove <alias>` eg `palias --remove p`
